@@ -28,6 +28,7 @@
     "koa-session": "^3.4.0",
     "koa-static": "^2.0.0",
     "node-fetch": "^1.6.3",
-    "socket.io": "^2.1.1"
+    "socket.io": "^2.1.1",
+    "ws": "^5.2.0"
   }
 }

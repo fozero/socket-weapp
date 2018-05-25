@@ -1,0 +1,6 @@
+<!--index.wxml  -->
+
+<view class="container">
+  <view>index.wxml</view>
+  <button bindtap="setup">建立连接</button>
+</view>

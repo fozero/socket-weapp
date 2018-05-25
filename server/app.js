@@ -18,8 +18,16 @@ import session from 'koa-session';//session模块
 import {KoaErr} from './common/helper';
 import index from './router/index';
 
+// 导入WebSocket模块:
+const WebSocket = require('ws');
+
+
 const app = new Koa();
 app.keys = ['im a newer secret'];
+
+
+
+
 
 // 全局错误处理
 app.use(async (ctx, next) => {
@@ -98,4 +106,10 @@ app.use(index.allowedMethods());
 
 // response
 app.listen(process.env.PORT || 3001, ()=>console.log('Koa start at 3001...'));
+// koa app的listen()方法返回http.Server:
+// let servers = app.listen(process.env.PORT || 3001, ()=>console.log('Koa start at 3001...'));
+// const wss = new WebSocket.Server({servers});
+// wss.on('connection', function (ws) {
+//     console.log("连接成功")
 
+// })
